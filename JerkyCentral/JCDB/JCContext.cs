@@ -7,6 +7,16 @@ namespace JCDB
 {
     public class JCContext : DbContext
     {
+        public JCContext()
+        {
+
+        }
+
+        public JCContext(DbContextOptions<JCContext> options):base(options)
+        {
+
+        }
+
         /// <summary>
         /// Making all the Table DbSets
         /// </summary>

@@ -18,7 +18,6 @@
   <ItemGroup>
     <ProjectReference Include="..\JCDB\JCDB.csproj" />
     <ProjectReference Include="..\JCLib\JCLib.csproj" />
-    <ProjectReference Include="..\JCUI\JCUI.csproj" />
   </ItemGroup>
 
 </Project>
