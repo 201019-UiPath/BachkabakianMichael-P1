@@ -20,5 +20,95 @@ namespace JCAPI.Controllers
         {
             this._userServices = service;
         }
+
+        [HttpPost("add")]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        public IActionResult AddUser(User user)
+        {
+            try
+            {
+                _userServices.AddUser(user);
+                return CreatedAtAction("AddUser", user);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpPut("Update")]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        public IActionResult UpdateUser(User user)
+        {
+            try
+            {
+                _userServices.UpdateUser(user);
+                return CreatedAtAction("UpdateUser", user);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpDelete("Delete")]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        public IActionResult DeleteUser(User user)
+        {
+            try
+            {
+                _userServices.DeleteUser(user);
+                return CreatedAtAction("DeleteUser", user);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpGet("get/{UserId}")]
+        [Produces("application/json")]
+        public IActionResult GetUserById(int id)
+        {
+            try
+            {
+                return Ok(_userServices.GetUserById(id));
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+        }
+
+        [HttpGet("get/{Name}")]
+        [Produces("application/json")]
+        public IActionResult GetUserByName(string name)
+        {
+            try
+            {
+                return Ok(_userServices.GetUserByName(name));
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+        }
+
+        [HttpGet("get")]
+        [Produces("application/json")]
+        public IActionResult GetAllUsers()
+        {
+            try
+            {
+                return Ok(_userServices.GetAllUsers());
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+        }
     }
 }

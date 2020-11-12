@@ -20,5 +20,95 @@ namespace JCAPI.Controllers
         {
             this._managerServices = service;
         }
+
+        [HttpPost("add")]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        public IActionResult AddManager(Manager manager)
+        {
+            try
+            {
+                _managerServices.AddManager(manager);
+                return CreatedAtAction("AddManager", manager);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpPut("Update")]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        public IActionResult UpdateManager(Manager manager)
+        {
+            try
+            {
+                _managerServices.UpdateManager(manager);
+                return CreatedAtAction("UpdateManager", manager);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpDelete("Delete")]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        public IActionResult DeleteManager(Manager manager)
+        {
+            try
+            {
+                _managerServices.DeleteManager(manager);
+                return CreatedAtAction("DeleteManager", manager);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpGet("get/{ManagerId}")]
+        [Produces("application/json")]
+        public IActionResult GetManagerById(int id)
+        {
+            try
+            {
+                return Ok(_managerServices.GetManagerById(id));
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+        }
+
+        [HttpGet("get/{ManagerName}")]
+        [Produces("application/json")]
+        public IActionResult GetManagerByName(string name)
+        {
+            try
+            {
+                return Ok(_managerServices.GetManagerByName(name));
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+        }
+
+        [HttpGet("get")]
+        [Produces("application/json")]
+        public IActionResult GetAllManagers()
+        {
+            try
+            {
+                return Ok(_managerServices.GetAllManagers());
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+        }
     }
 }
