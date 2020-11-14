@@ -10,7 +10,7 @@ using JCLib;
 
 namespace JCAPI.Controllers
 {
-    [Route("api/Manager")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ManagerController : ControllerBase
     {
@@ -83,7 +83,7 @@ namespace JCAPI.Controllers
             }
         }
 
-        [HttpGet("get/{ManagerName}")]
+        [HttpGet("get")]
         [Produces("application/json")]
         public IActionResult GetManagerByName(string name)
         {
@@ -97,7 +97,7 @@ namespace JCAPI.Controllers
             }
         }
 
-        [HttpGet("get")]
+        [HttpGet("getAll")]
         [Produces("application/json")]
         public IActionResult GetAllManagers()
         {

@@ -1,13 +1,12 @@
 ﻿@model JerkyCentralWeb.Models.LoginViewModel
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "ManagerLogin";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome To JerkyCentral!</h1>
+    <h1 class="display-4">Manager Login</h1>
     <p>Sign In Below.</p>
 </div>
-@*@Html.Partial("_DateTimePartial")*@
 
 <section id="cover" class="min-vh-100">
     <div id="cover-caption">
@@ -15,7 +14,7 @@
             <div class="row text-black-50">
                 <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
                     <div class="px-2">
-                        <form asp-action="Login" class="justify-content-center">
+                        <form asp-action="ManagerLogin" class="justify-content-center">
                             <div class="form-group">
                                 <label asp-for="Name"></label>
                                 <input asp-for="Name" type="text" class="form-control shadow-lg" id="Name" aria-describedby="emailHelp">
@@ -27,7 +26,6 @@
                             <div class="form-group">
                                 <input type="submit" value="Sign in" class="btn btn-primary shadow-lg">
                             </div>
-                            <span><small>Don't have an account? @Html.ActionLink("Sign up", "Signup", "Home")!</small></span>
                         </form>
                     </div>
                 </div>

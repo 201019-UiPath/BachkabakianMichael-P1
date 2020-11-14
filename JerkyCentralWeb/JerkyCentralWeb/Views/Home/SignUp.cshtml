@@ -1,13 +1,12 @@
-﻿@model JerkyCentralWeb.Models.LoginViewModel
+﻿@model JerkyCentralWeb.Models.SignUpViewModel
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Sign Up";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome To JerkyCentral!</h1>
-    <p>Sign In Below.</p>
+    <h1 class="display-4">Account Sign Up!</h1>
+    <p>Sign Up Below.</p>
 </div>
-@*@Html.Partial("_DateTimePartial")*@
 
 <section id="cover" class="min-vh-100">
     <div id="cover-caption">
@@ -18,16 +17,15 @@
                         <form asp-action="Login" class="justify-content-center">
                             <div class="form-group">
                                 <label asp-for="Name"></label>
-                                <input asp-for="Name" type="text" class="form-control shadow-lg" id="Name" aria-describedby="emailHelp">
+                                <input asp-for="Name" type="email" class="form-control shadow-lg" aria-describedby="emailHelp">
                             </div>
                             <div class="form-group">
                                 <label asp-for="PassWord"></label>
-                                <input asp-for="PassWord" type="password" class="form-control shadow-lg" id="password">
+                                <input asp-for="PassWord" type="password" class="form-control shadow-lg">
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Sign in" class="btn btn-primary shadow-lg">
+                                <input type="submit" value="Sign up" class="btn btn-primary shadow-lg">
                             </div>
-                            <span><small>Don't have an account? @Html.ActionLink("Sign up", "Signup", "Home")!</small></span>
                         </form>
                     </div>
                 </div>
@@ -35,3 +33,4 @@
         </div>
     </div>
 </section>
+

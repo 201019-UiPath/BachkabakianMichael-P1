@@ -10,7 +10,7 @@ using JCLib;
 
 namespace JCAPI.Controllers
 {
-    [Route("api/Location")]
+    [Route("api/[controller]")]
     [ApiController]
     public class LocationController : ControllerBase
     {
@@ -83,7 +83,7 @@ namespace JCAPI.Controllers
             }
         }
 
-        [HttpGet("get/{LocationName}")]
+        [HttpGet("get")]
         [Produces("application/json")]
         public IActionResult GetLocationByName(string name)
         {
@@ -97,7 +97,7 @@ namespace JCAPI.Controllers
             }
         }
 
-        [HttpGet("get")]
+        [HttpGet("getAll")]
         [Produces("application/json")]
         public IActionResult GetAllLocations()
         {

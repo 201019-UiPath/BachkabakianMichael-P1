@@ -10,7 +10,7 @@ using JCLib;
 
 namespace JCAPI.Controllers
 {
-    [Route("api/User")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -83,7 +83,7 @@ namespace JCAPI.Controllers
             }
         }
 
-        [HttpGet("get/{Name}")]
+        [HttpGet("get")]
         [Produces("application/json")]
         public IActionResult GetUserByName(string name)
         {
@@ -97,7 +97,7 @@ namespace JCAPI.Controllers
             }
         }
 
-        [HttpGet("get")]
+        [HttpGet("getall")]
         [Produces("application/json")]
         public IActionResult GetAllUsers()
         {
