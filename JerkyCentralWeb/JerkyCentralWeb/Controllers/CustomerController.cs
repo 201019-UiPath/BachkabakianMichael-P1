@@ -50,5 +50,19 @@ namespace JerkyCentralWeb.Controllers
             return View();
         }
 
+        public IActionResult PlaceOrder()
+        {
+            return View();
+        }
+
+        public IActionResult OrderHistory()
+        {
+            return View();
+        }
+
+        public IActionResult LocationInventory()
+        {
+            return View();
+        }
     }
 }

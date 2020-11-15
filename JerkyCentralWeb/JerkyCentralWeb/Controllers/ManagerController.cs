@@ -51,6 +51,21 @@ namespace JerkyCentralWeb.Controllers
         {
             return View();
         }
+
+        public IActionResult ManagerOption1()
+        {
+            return View();
+        }
+
+        public IActionResult ManagerOption2()
+        {
+            return View();
+        }
+
+        public IActionResult ManagerOption3()
+        {
+            return View();
+        }
     }
 
 

@@ -3,5 +3,25 @@
     ViewData["Title"] = "Options";
 }
 
-<h1>Options</h1>
+<div class="text-center">
+    <h1 class="display-4">Welcome To JerkyCentral!</h1>
+    <p>What Would You Like To Do?</p>
+</div>
+@*@Html.Partial("_DateTimePartial")*@
+
+<section id="cover" class="min-vh-100">
+    <div id="cover-caption">
+        <div class="container">
+            <div class="row text-black-50">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                    <div class="px-2">
+                        <p> <a href="https://localhost:44361/Customer/PlaceOrder"> Place An Order</a><br /></p>
+                        <p> <a href="https://localhost:44361/Customer/OrderHistory"> View Order History</a><br /></p>
+                        <p> <a href="https://localhost:44361/Customer/LocationInventory"> View Location Inventory</a><br /></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
