@@ -52,17 +52,17 @@ namespace JerkyCentralWeb.Controllers
             return View();
         }
 
-        public IActionResult ManagerOption1()
+        public IActionResult ReplenishInventory()
         {
             return View();
         }
 
-        public IActionResult ManagerOption2()
+        public IActionResult LocationInventory()
         {
             return View();
         }
 
-        public IActionResult ManagerOption3()
+        public IActionResult OrderHistoryLocation()
         {
             return View();
         }
