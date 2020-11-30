@@ -10,7 +10,7 @@ using JCLib;
 
 namespace JCAPI.Controllers
 {
-    [Route("api/Order")]
+    [Route("api/[controller]")]
     [ApiController]
     public class OrderController : ControllerBase
     {
@@ -97,7 +97,7 @@ namespace JCAPI.Controllers
             }
         }
 
-        [HttpGet("get/{UserId}")]
+        [HttpGet("get/user/{UserId}")]
         [Produces("application/json")]
         public IActionResult GetOrdersByUserId(int id)
         {
@@ -111,7 +111,7 @@ namespace JCAPI.Controllers
             }
         }
 
-        [HttpGet("get/{LocationId}")]
+        [HttpGet("get/location/{LocationId}")]
         [Produces("application/json")]
         public IActionResult GetOrdersByLocationId(int id)
         {

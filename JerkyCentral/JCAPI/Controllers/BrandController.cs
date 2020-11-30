@@ -10,7 +10,7 @@ using JCLib;
 
 namespace JCAPI.Controllers
 {
-    [Route("api/Brand")]
+    [Route("api/[controller]")]
     [ApiController]
     public class BrandController : ControllerBase
     {

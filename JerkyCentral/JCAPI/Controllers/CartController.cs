@@ -10,7 +10,7 @@ using JCLib;
 
 namespace JCAPI.Controllers
 {
-    [Route("api/Cart")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CartController : ControllerBase
     {
